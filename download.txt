@@ -1,5 +1,0 @@
--delete button
--important task : color and bold
-- hover when I touch a task
--vema to a completed task
-- pin icon to important
