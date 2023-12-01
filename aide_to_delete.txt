@@ -1,0 +1,86 @@
+const addTask= document.getElementById("add-task");
+const taskList= document.getElementById("task-list");
+
+function addFunction(){
+    // To prompt an alert if the add button is pressed with an empty value input field
+    if(addTask.value == ''){
+        alert("First write something before adding")
+    }
+    // else the written content is added as in the task list
+    else{
+        alert("Is this task too important?"); 
+        let listContent= document.createElement("li");
+        listContent.innerHTML= addTask.value;
+        taskList.appendChild(listContent)
+        //To create a cross element after each task
+        let delete_icon= document.createElement("span");
+        delete_icon.innerHTML= "\u00d7";
+        listContent.appendChild(delete_icon)
+    }
+    addTask.value= "";
+    saveTasks();//To save the updated state of the list
+}
+
+
+taskList.addEventListener("click", function (e) {
+    // To mark completed task by clicking in the task
+    if (e.target.tagName === "LI") {
+      e.target.classList.toggle("completed-task");
+      saveTasks();//To save the updated state of the list
+    } 
+    // To delete a task by clicking delete-icon
+    else if (e.target.tagName === "SPAN") {
+      e.target.parentElement.remove();
+      saveTasks();//To save the updated state of the list
+    }
+  }, false);
+    // Function used to save data 
+  function saveTasks(){
+        localStorage.setItem("savedTasks",taskList.innerHTML);
+  }
+    // Function used to display all the saved data
+  function displayTasks(){
+        taskList.innerHTML=localStorage.getItem("savedTasks");
+  }
+  displayTasks();//To display all saved data by calling displayTasks() function
+
+
+
+
+
+
+
+
+/////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+taskList.addEventListener("click", function (e) {
+    if (e.target.tagName === "LI") {
+        e.target.classList.toggle("completed-task");
+        saveTasks(); // Save the updated state of the list
+    } else if (e.target.classList.contains("deleteIcon")) {
+        e.target.parentElement.remove();
+        saveTasks(); // Save the updated state of the list
+    } else if (e.target.classList.contains("editIcon")) {
+        const listItem = e.target.parentElement;
+        const taskTextElement = listItem.firstChild;
+        const currentText = taskTextElement.textContent;
+        const newText = prompt("Edit the task:", currentText);
+        if (newText !== null && newText !== '') {
+            taskTextElement.textContent = newText;
+            saveTasks(); // Save the updated state of the list
+        }
+    }
+}, false);
+
+  

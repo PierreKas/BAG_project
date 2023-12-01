@@ -1,0 +1,141 @@
+/* For all the elements */
+*{
+    margin: 0;
+    padding: 0; 
+    /* font-family: 'Poppins', 'sans-serif'; */
+    /* box-sizing: border-box; */
+}
+/* set background styles */
+.background{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg,#153,rgb(70, 128, 47));/*  military green */
+    padding: 10px;
+}
+h2 img{
+    width: 50px; /*  Reducing the size of the image to make it an icon */
+    height: auto;
+}
+.sub-title{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px ;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.input-field{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(237, 243, 242);
+    border-radius: 30px;
+    padding-left: 0px;
+    
+}
+input{
+    flex: 1; 
+    border: none; 
+    outline: none;  
+    background: transparent;
+    padding: 8px 25px;
+    font-weight: 0px; 
+}
+button{
+    padding: 8px 25px;
+    background: #153;
+    border: none; 
+    outline: none;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 40px;
+}
+button:hover{
+    background:black;
+}
+.space{
+    padding: 8px 25px;
+    background: transparent;
+    background: white
+}
+ul li{
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* To put space between li elements */
+    background: rgb(237, 243, 242);
+    list-style: none;
+    font-size: 20px;
+    padding: 13px 10px 10px 45px;
+    position: relative;
+    cursor: pointer;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    background-image: url(icons/check_green.jpeg);
+    background-size: cover;
+    top: 12px;
+    left: 8px;
+
+}
+/* The style to completed task */
+.completed-task::before{
+    background-image: url(icons/save_green.jpeg);
+    background-size: cover;
+    
+}
+.completed-task{
+    /* text-decoration-line: line-through; */
+    opacity: 0.5; /* Optionally reduce opacity for completed tasks */
+    pointer-events: none; /*  Disable pointer events for completed tasks */
+}
+ul li span{
+    position: relative;
+    color: #153;
+    display: flex; /*  To make elements flexible */
+    align-items: center;
+}
+/* To set the color when the task is touched */
+ul li:hover{
+    background: rgb(164, 223, 194); 
+}
+
+/* style for edit icon */
+.editIcon{
+    transform: rotate(135deg); /* this line rotate the edit icon to 135deg because by default it's has 180deg */
+    display: inline-block;
+    width: 20px;
+    margin-right: 13px;
+    cursor:pointer;
+}
+
+/* To hide the icons by default */
+ul li .editIcon,
+ul li .deleteIcon,
+ul li .important_task {
+    display: none;
+}
+
+/* To show the icons when a task is touched */
+ul li:hover .editIcon,
+ul li:hover .deleteIcon,
+ul li:hover .important_task {
+    display: inline-block;
+}
+/* To set the green color as background of important tasks */
+.pinned-task {
+    background-color: green;
+}
+/* To keep the delete icon even if the task is completed */
+.completed-task .deleteIcon {
+    display: inline-block; 
+    
+}
+.completed-task .editIcon{
+    display: none;
+}
