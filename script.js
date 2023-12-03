@@ -34,11 +34,10 @@ function addFunction(){
     addTask.value= ""; //To empty the input field when the task is added succesfuly
     saveTasks();//To save the updated state of the list
 }
-
 // What to do when buttons or tasks are clicked
 taskList.addEventListener("click", function (e) {
           // To mark completed task by clicking in the task
-          if (e.target.tagName === "LI" && !e.target.classList.contains("completed-task")) {
+          if (e.target.tagName === "LI") {
             e.target.classList.toggle("completed-task");
             saveTasks();//To save the updated state of the list
     } 
@@ -67,6 +66,7 @@ taskList.addEventListener("click", function (e) {
                   alert("Edit failed");
                 }
     }
+          // To mark task as completed
           else if(e.target.classList.contains("important_task") && !e.target.classList.contains("completed-task")){
             const listItem = e.target.parentElement;
             listItem.classList.toggle("pinned-task");

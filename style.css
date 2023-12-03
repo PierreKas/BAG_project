@@ -86,13 +86,22 @@ ul li::before{
 .completed-task::before{
     background-image: url(icons/save_green.jpeg);
     background-size: cover;
-    
+    content: '';
 }
 .completed-task{
     
     opacity: 0.2; /* To reduce the opacity of the completed tasks */
-    pointer-events: none; /*  To disable pointer events for completed tasks */
+    /*pointer-events: none;   To disable pointer events for completed tasks */
 }
+
+.completed-task .deleteIcon {
+    display: inline-block; /* To keep the delete icon even if the task is completed */
+    
+}
+.completed-task .editIcon{
+    display: none;  /* To remove the edit icon when the task is completed */
+}
+ 
 /* The style for the icons */
 ul li span{
     position: relative;
@@ -131,14 +140,8 @@ ul li:hover .important_task {
 .pinned-task {
     background-color: green;
 }
-/* To keep the delete icon even if the task is completed */
-.completed-task .deleteIcon {
-    display: inline-block; 
-    
-}
-.completed-task .editIcon{
-    display: none;
-}
+ 
+
 
 /* RESPONSIVE DESIGN */
 
