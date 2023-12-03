@@ -19,7 +19,7 @@ h2 img{
     width: 100%;
     max-width: 540px;
     background: #fff;
-    margin: 100px ;
+    margin: 100px auto;/*Left and right are setting to auto*/
     padding: 40px 30px 70px;
     border-radius: 10px;
 }
