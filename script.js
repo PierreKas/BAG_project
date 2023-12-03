@@ -13,9 +13,9 @@ function addFunction(){
           listContent.innerHTML= addTask.value;
           taskList.insertBefore(listContent, taskList.childNodes[0]); // To insert the added task on the top of the list
           
-          //pin icon for important tasks
+          // star icon for important tasks
           let important_icon= document.createElement("span");
-          important_icon.innerHTML= "&#x1F4CC;";
+          important_icon.innerHTML= "&#9733;";
           important_icon.classList.add("important_task"); //Class to use in CSS
           listContent.appendChild(important_icon);
           
@@ -70,7 +70,6 @@ taskList.addEventListener("click", function (e) {
           else if(e.target.classList.contains("important_task") && !e.target.classList.contains("completed-task")){
             const listItem = e.target.parentElement;
             listItem.classList.toggle("pinned-task");
-
             saveTasks();
           }
       

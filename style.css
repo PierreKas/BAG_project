@@ -82,6 +82,7 @@ ul li::before{
     left: 8px;
 
 }
+
 /* The style to completed task */
 .completed-task::before{
     background-image: url(icons/save_green.jpeg);
@@ -91,17 +92,20 @@ ul li::before{
 .completed-task{
     
     opacity: 0.2; /* To reduce the opacity of the completed tasks */
-    /*pointer-events: none;   To disable pointer events for completed tasks */
+    
 }
 
 .completed-task .deleteIcon {
     display: inline-block; /* To keep the delete icon even if the task is completed */
+    font-weight: bold;
     
 }
+.completed-task .important_task,
 .completed-task .editIcon{
-    display: none;  /* To remove the edit icon when the task is completed */
+    opacity: 0; /*To hide the edit and star icons when a task is completed*/
+    pointer-events: none;  /* To disable editand star if the task is completed  */
 }
- 
+
 /* The style for the icons */
 ul li span{
     position: relative;
@@ -139,6 +143,8 @@ ul li:hover .important_task {
 /* To set the green color as background of important tasks */
 .pinned-task {
     background-color: green;
+    /* color: white; */
+    font-weight: bold;
 }
  
 
