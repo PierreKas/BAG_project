@@ -139,3 +139,77 @@ ul li:hover .important_task {
 .completed-task .editIcon{
     display: none;
 }
+
+
+/* For desktop screens */
+/* ... your existing CSS code ... */
+
+/* For smaller screens, such as tablets */
+@media (max-width: 768px) {
+    /* Adjust the width of the sub-title and its margin */
+    .sub-title {
+      margin: 50px;
+      padding: 20px;
+    }
+    
+    /* Adjust the width of the input field and buttons */
+    .input-field {
+      padding-left: 5px;
+    }
+    input,
+    button {
+      padding: 5px 15px;
+      font-size: 12px;
+    }
+    
+    /* Adjust the size of the icons */
+    h2 img {
+      width: 40px;
+    }
+    ul li::before {
+      height: 20px;
+      width: 20px;
+      top: 8px;
+      left: 6px;
+    }
+    .editIcon {
+      width: 15px;
+      margin-right: 10px;
+    }
+    
+    /* Hide some elements */
+    .completed-task .editIcon {
+      display: none;
+    }
+  }
+  
+  /* For even smaller screens, such as mobile phones */
+  @media (max-width: 480px) {
+    /* Adjust styles further for smaller screens */
+    .sub-title {
+      margin: 30px;
+      padding: 10px;
+    }
+    .input-field {
+      padding-left: 3px;
+    }
+    input,
+    button {
+      padding: 3px 10px;
+      font-size: 10px;
+    }
+    h2 img {
+      width: 30px;
+    }
+    ul li::before {
+      height: 15px;
+      width: 15px;
+      top: 6px;
+      left: 4px;
+    }
+    .editIcon {
+      width: 10px;
+      margin-right: 7px;
+    }
+  }
+  
