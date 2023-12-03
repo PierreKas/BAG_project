@@ -140,19 +140,20 @@ ul li:hover .important_task {
     display: none;
 }
 
+/* RESPONSIVE DESIGN */
 
-/* For desktop screens */
-/* ... your existing CSS code ... */
+/*My previous styles are accomodated for desktop screens */
 
-/* For smaller screens, such as tablets */
+
+/* For  tablets */
 @media (max-width: 768px) {
-    /* Adjust the width of the sub-title and its margin */
+    
     .sub-title {
       margin: 50px;
       padding: 20px;
     }
     
-    /* Adjust the width of the input field and buttons */
+    
     .input-field {
       padding-left: 5px;
     }
@@ -162,7 +163,7 @@ ul li:hover .important_task {
       font-size: 12px;
     }
     
-    /* Adjust the size of the icons */
+    
     h2 img {
       width: 40px;
     }
@@ -177,15 +178,15 @@ ul li:hover .important_task {
       margin-right: 10px;
     }
     
-    /* Hide some elements */
+    
     .completed-task .editIcon {
       display: none;
     }
   }
   
-  /* For even smaller screens, such as mobile phones */
+  /* For mobile phones */
   @media (max-width: 480px) {
-    /* Adjust styles further for smaller screens */
+    
     .sub-title {
       margin: 30px;
       padding: 10px;
