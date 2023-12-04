@@ -15,9 +15,9 @@ function addFunction(){
           
           // star icon for important tasks
           let important_icon= document.createElement("span");
-          important_icon.innerHTML= "&#9733;";
+          important_icon.innerHTML= "&#9734;";
           important_icon.classList.add("important_task"); //Class to use in CSS
-          listContent.appendChild(important_icon);
+          listContent.appendChild(important_icon); 
           
           //edit icon 
           let edit_icon = document.createElement("span");

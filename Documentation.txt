@@ -1,0 +1,10 @@
+My names are KAHASHA KASANANI Pierre
+
+On this documentation I explain how my web application works.
+
+To ADD a task you have to type in the input field and write not more than 35 characters,then you click on add button and the task will be added.
+To EDIT the task you click on edit icon
+To DELETE the task you click on edit icon
+To make the task IMPORTANT you click on star icon
+To COMPLETE the task you click on click on the task itself, and if you need it after clickon it again and it will be available.
+    COMPLETED tasks can't be edited or marked as important but they can be deleted
